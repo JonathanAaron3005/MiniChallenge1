@@ -163,7 +163,7 @@ struct Reminders: View {
                         
                     }
                         .padding()
-                )
+                )//asdasdasdas
             RoundedRectangle(cornerRadius: 10)
                 .fill(Color("darkBlue"))
                 .frame(width: 160, height: 150)
