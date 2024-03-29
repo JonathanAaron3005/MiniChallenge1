@@ -79,25 +79,26 @@ struct ExpensesAndBalances: View {
                                    bottomLeadingRadius: 0, bottomTrailingRadius: 40, topTrailingRadius: 25)
             .fill(Color("darkBlue"))
             .frame(width: .infinity, height: 100)
-            .overlay(HStack{
-                VStack{
-                    Text("Your Expenses")
-                        .font(.system(size: 20))
-                        .fontWeight(.medium)
-                        .foregroundColor(.white)
-                        .frame(maxWidth: .infinity ,alignment: .leading)
-                    Text("Rp500.000")
-                        .font(.system(size: 37))
-                        .fontWeight(.bold)
-                        .foregroundColor(Color("customYellow"))
-                        .frame(maxWidth: .infinity ,alignment: .leading)
+            .overlay(
+                HStack{
+                    VStack{
+                        Text("Your Expenses")
+                            .font(.system(size: 20))
+                            .fontWeight(.medium)
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity ,alignment: .leading)
+                        Text("Rp500.000")
+                            .font(.system(size: 37))
+                            .fontWeight(.bold)
+                            .foregroundColor(Color("customYellow"))
+                            .frame(maxWidth: .infinity ,alignment: .leading)
+                    }
+                    .padding()
+                    
+                    Text("😱")
+                        .font(.system(size: 80))
+                        .padding(EdgeInsets(top: 22, leading: 0, bottom: 0, trailing: 20))
                 }
-                .padding()
-                
-                Text("😱")
-                    .font(.system(size: 80))
-                    .padding(EdgeInsets(top: 22, leading: 0, bottom: 0, trailing: 20))
-            }
             )
             
             UnevenRoundedRectangle(topLeadingRadius: 0,
@@ -184,3 +185,4 @@ struct Reminders: View {
         }
     }
 }
+
