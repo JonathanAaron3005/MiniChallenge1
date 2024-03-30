@@ -33,7 +33,7 @@ struct ContentView: View {
                     
                     ExpensesAndBalances()
                     
-                    Reminders()
+                    //Reminders()
                     
                     VStack{
                         Text("Category")
