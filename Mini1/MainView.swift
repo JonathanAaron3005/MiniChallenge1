@@ -9,7 +9,7 @@ struct MainView: View {
                 }
             FormView()
                 .tabItem {
-                    Label("", systemImage: "plus")
+                    Label("", systemImage: "plus.circle.fill")
                 }
             PlanView()
                 .tabItem {
