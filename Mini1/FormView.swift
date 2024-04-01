@@ -15,10 +15,14 @@ struct FormView: View {
                     Spacer()
                     RoundedRectangle(cornerRadius: 10)
                         .fill(Color("darkBlue"))
-                        .frame(height: geometry.size.height / 1.6)
+                        .frame(height: geometry.size.height / 1.4)
                 }
                 .ignoresSafeArea(.all)
             }
+            
+            Text("💸")
+                .font(.system(size: 170))
+                .padding(EdgeInsets(top: -230, leading: 0, bottom: 0, trailing: 0))
         }
     }
 }
@@ -29,6 +33,4 @@ struct FormView: View {
 }
 
 
-//Text("💸")
-//    .font(.system(size: 150))
-//    .padding(EdgeInsets(top: -150, leading: 0, bottom: 0, trailing: 0))
+
