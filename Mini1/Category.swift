@@ -32,11 +32,13 @@ struct Category: View {
                             .font(.system(size: 12))
                             .fontWeight(.light)
                     }
-                    
                         .padding()
-
                 )
+                .shadow(color: .black.opacity(0.13), radius: 3, x: 0, y: 3)
         }
     }
 }
 
+#Preview {
+    Category(categoryName: "Food", price: 100, icon: "🍔")
+}
