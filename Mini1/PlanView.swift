@@ -2,47 +2,83 @@ import SwiftUI
 import Charts
 
 //DUMMY DATA ------------------------------------------------------------------------
-struct MonthlyHoursOfSunshine: Identifiable {
+struct Transaction: Identifiable {
     let id = UUID()
-    var city: String
+    var status: String
     var date: Date
-    var hoursOfSunshine: Double
+    var amount: Double
 
-    init(city: String, month: Int, hoursOfSunshine: Double) {
+    init(status: String, day: Int, amount: Double) {
         let calendar = Calendar.autoupdatingCurrent
-        self.city = city
-        self.date = calendar.date(from: DateComponents(year: 2023, month: month))!
-        self.hoursOfSunshine = hoursOfSunshine
+        self.status = status
+        self.date = calendar.date(from: DateComponents(year: 2023, month: 1, day: day))!
+        self.amount = amount
     }
 }
 
-var data: [MonthlyHoursOfSunshine] = [
+var data: [Transaction] = [
 
-    MonthlyHoursOfSunshine(city: "Seattle", month: 1, hoursOfSunshine: 74),
-    MonthlyHoursOfSunshine(city: "Seattle", month: 2, hoursOfSunshine: 80),
-    MonthlyHoursOfSunshine(city: "Seattle", month: 3, hoursOfSunshine: 90),
-    MonthlyHoursOfSunshine(city: "Seattle", month: 4, hoursOfSunshine: 110),
-    MonthlyHoursOfSunshine(city: "Seattle", month: 5, hoursOfSunshine: 130),
-    MonthlyHoursOfSunshine(city: "Seattle", month: 6, hoursOfSunshine: 140),
-    MonthlyHoursOfSunshine(city: "Seattle", month: 7, hoursOfSunshine: 160),
-    MonthlyHoursOfSunshine(city: "Seattle", month: 8, hoursOfSunshine: 150),
-    MonthlyHoursOfSunshine(city: "Seattle", month: 9, hoursOfSunshine: 140),
-    MonthlyHoursOfSunshine(city: "Seattle", month: 10, hoursOfSunshine: 120),
-    MonthlyHoursOfSunshine(city: "Seattle", month: 11, hoursOfSunshine: 100),
-    MonthlyHoursOfSunshine(city: "Seattle", month: 12, hoursOfSunshine: 80),
+    Transaction(status: "Expense", day: 1, amount: 74),
+    Transaction(status: "Expense", day: 2, amount: 174),
+    Transaction(status: "Expense", day: 3, amount: 44),
+    Transaction(status: "Expense", day: 4, amount: 54),
+    Transaction(status: "Expense", day: 5, amount: 64),
+    Transaction(status: "Expense", day: 6, amount: 74),
+    Transaction(status: "Expense", day: 7, amount: 134),
+    Transaction(status: "Expense", day: 8, amount: 50),
+    Transaction(status: "Expense", day: 9, amount: 214),
+    Transaction(status: "Expense", day: 10, amount: 200),
+    Transaction(status: "Expense", day: 11, amount: 133),
+    Transaction(status: "Expense", day: 12, amount: 134),
+    Transaction(status: "Expense", day: 13, amount: 200),
+    Transaction(status: "Expense", day: 14, amount: 300),
+    Transaction(status: "Expense", day: 15, amount: 374),
+    Transaction(status: "Expense", day: 16, amount: 274),
+    Transaction(status: "Expense", day: 17, amount: 123),
+    Transaction(status: "Expense", day: 18, amount: 343),
+    Transaction(status: "Expense", day: 19, amount: 144),
+    Transaction(status: "Expense", day: 20, amount: 256),
+    Transaction(status: "Expense", day: 21, amount: 188),
+    Transaction(status: "Expense", day: 22, amount: 123),
+    Transaction(status: "Expense", day: 23, amount: 321),
+    Transaction(status: "Expense", day: 24, amount: 213),
+    Transaction(status: "Expense", day: 25, amount: 111),
+    Transaction(status: "Expense", day: 26, amount: 222),
+    Transaction(status: "Expense", day: 27, amount: 233),
+    Transaction(status: "Expense", day: 28, amount: 231),
+    Transaction(status: "Expense", day: 29, amount: 124),
+    Transaction(status: "Expense", day: 30, amount: 111),
     
-    MonthlyHoursOfSunshine(city: "Cupertino", month: 1, hoursOfSunshine: 196),
-    MonthlyHoursOfSunshine(city: "Cupertino", month: 2, hoursOfSunshine: 180),
-    MonthlyHoursOfSunshine(city: "Cupertino", month: 3, hoursOfSunshine: 220),
-    MonthlyHoursOfSunshine(city: "Cupertino", month: 4, hoursOfSunshine: 240),
-    MonthlyHoursOfSunshine(city: "Cupertino", month: 5, hoursOfSunshine: 260),
-    MonthlyHoursOfSunshine(city: "Cupertino", month: 6, hoursOfSunshine: 170),
-    MonthlyHoursOfSunshine(city: "Cupertino", month: 7, hoursOfSunshine: 280),
-    MonthlyHoursOfSunshine(city: "Cupertino", month: 8, hoursOfSunshine: 290),
-    MonthlyHoursOfSunshine(city: "Cupertino", month: 9, hoursOfSunshine: 280),
-    MonthlyHoursOfSunshine(city: "Cupertino", month: 10, hoursOfSunshine: 260),
-    MonthlyHoursOfSunshine(city: "Cupertino", month: 11, hoursOfSunshine: 240),
-    MonthlyHoursOfSunshine(city: "Cupertino", month: 12, hoursOfSunshine: 60)
+    Transaction(status: "Income", day: 1, amount: 374),
+    Transaction(status: "Income", day: 2, amount: 174),
+    Transaction(status: "Income", day: 3, amount: 454),
+    Transaction(status: "Income", day: 4, amount: 114),
+    Transaction(status: "Income", day: 5, amount: 90),
+    Transaction(status: "Income", day: 6, amount: 274),
+    Transaction(status: "Income", day: 7, amount: 234),
+    Transaction(status: "Income", day: 8, amount: 230),
+    Transaction(status: "Income", day: 9, amount: 214),
+    Transaction(status: "Income", day: 10, amount: 290),
+    Transaction(status: "Income", day: 11, amount: 125),
+    Transaction(status: "Income", day: 12, amount: 334),
+    Transaction(status: "Income", day: 13, amount: 300),
+    Transaction(status: "Income", day: 14, amount: 174),
+    Transaction(status: "Income", day: 15, amount: 174),
+    Transaction(status: "Income", day: 16, amount: 224),
+    Transaction(status: "Income", day: 17, amount: 123),
+    Transaction(status: "Income", day: 18, amount: 300),
+    Transaction(status: "Income", day: 19, amount: 374),
+    Transaction(status: "Income", day: 20, amount: 234),
+    Transaction(status: "Income", day: 21, amount: 146),
+    Transaction(status: "Income", day: 22, amount: 174),
+    Transaction(status: "Income", day: 23, amount: 230),
+    Transaction(status: "Income", day: 24, amount: 320),
+    Transaction(status: "Income", day: 25, amount: 120),
+    Transaction(status: "Income", day: 26, amount: 174),
+    Transaction(status: "Income", day: 27, amount: 274),
+    Transaction(status: "Income", day: 28, amount: 374),
+    Transaction(status: "Income", day: 29, amount: 454),
+    Transaction(status: "Income", day: 30, amount: 374),
 ]
 //------------------------------------------------------------------------------
 
@@ -84,10 +120,10 @@ struct PlanView: View {
                     
                     Chart(data) {
                         LineMark(
-                            x: .value("Month", $0.date),
-                            y: .value("Hours of Sunshine", $0.hoursOfSunshine)
+                            x: .value("Day", $0.date),
+                            y: .value("Hours of Sunshine", $0.amount)
                         )
-                        .foregroundStyle(by: .value("City", $0.city))
+                        .foregroundStyle(by: .value("Status", $0.status))
                     }
                     
                     Spacer()
