@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DC72083F2BB4A24A0025C056 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC72083E2BB4A24A0025C056 /* Category.swift */; };
 		DC7208472BB7F4300025C056 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7208462BB7F4300025C056 /* MainView.swift */; };
-		DC7208492BB7F47F0025C056 /* PlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7208482BB7F47F0025C056 /* PlanView.swift */; };
+		DC7208492BB7F47F0025C056 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7208482BB7F47F0025C056 /* DetailView.swift */; };
 		DC72084B2BB7F61F0025C056 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC72084A2BB7F61F0025C056 /* FormView.swift */; };
+		DCAF12E82BBC037800661202 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAF12E72BBC037800661202 /* TransactionModel.swift */; };
+		DCAF12EA2BBC4DA100661202 /* BudgetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAF12E92BBC4DA100661202 /* BudgetModel.swift */; };
+		DCAF12EC2BBC7DE400661202 /* PlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAF12EB2BBC7DE400661202 /* PlanView.swift */; };
 		DCD26E9B2BB3F08E00D22E33 /* Mini1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD26E9A2BB3F08E00D22E33 /* Mini1App.swift */; };
 		DCD26E9D2BB3F08E00D22E33 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD26E9C2BB3F08E00D22E33 /* ContentView.swift */; };
 		DCD26E9F2BB3F08F00D22E33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCD26E9E2BB3F08F00D22E33 /* Assets.xcassets */; };
@@ -18,10 +20,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DC72083E2BB4A24A0025C056 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		DC7208462BB7F4300025C056 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		DC7208482BB7F47F0025C056 /* PlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanView.swift; sourceTree = "<group>"; };
+		DC7208482BB7F47F0025C056 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		DC72084A2BB7F61F0025C056 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
+		DCAF12E72BBC037800661202 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
+		DCAF12E92BBC4DA100661202 /* BudgetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetModel.swift; sourceTree = "<group>"; };
+		DCAF12EB2BBC7DE400661202 /* PlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanView.swift; sourceTree = "<group>"; };
 		DCD26E972BB3F08E00D22E33 /* Mini1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mini1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCD26E9A2BB3F08E00D22E33 /* Mini1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mini1App.swift; sourceTree = "<group>"; };
 		DCD26E9C2BB3F08E00D22E33 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,14 +63,16 @@
 		DCD26E992BB3F08E00D22E33 /* Mini1 */ = {
 			isa = PBXGroup;
 			children = (
+				DCAF12E72BBC037800661202 /* TransactionModel.swift */,
 				DCD26E9A2BB3F08E00D22E33 /* Mini1App.swift */,
 				DCD26E9C2BB3F08E00D22E33 /* ContentView.swift */,
 				DCD26E9E2BB3F08F00D22E33 /* Assets.xcassets */,
 				DCD26EA02BB3F08F00D22E33 /* Preview Content */,
-				DC72083E2BB4A24A0025C056 /* Category.swift */,
 				DC7208462BB7F4300025C056 /* MainView.swift */,
-				DC7208482BB7F47F0025C056 /* PlanView.swift */,
+				DCAF12EB2BBC7DE400661202 /* PlanView.swift */,
+				DC7208482BB7F47F0025C056 /* DetailView.swift */,
 				DC72084A2BB7F61F0025C056 /* FormView.swift */,
+				DCAF12E92BBC4DA100661202 /* BudgetModel.swift */,
 			);
 			path = Mini1;
 			sourceTree = "<group>";
@@ -149,12 +155,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCAF12EA2BBC4DA100661202 /* BudgetModel.swift in Sources */,
 				DC72084B2BB7F61F0025C056 /* FormView.swift in Sources */,
 				DCD26E9D2BB3F08E00D22E33 /* ContentView.swift in Sources */,
-				DC7208492BB7F47F0025C056 /* PlanView.swift in Sources */,
+				DC7208492BB7F47F0025C056 /* DetailView.swift in Sources */,
 				DC7208472BB7F4300025C056 /* MainView.swift in Sources */,
-				DC72083F2BB4A24A0025C056 /* Category.swift in Sources */,
+				DCAF12E82BBC037800661202 /* TransactionModel.swift in Sources */,
 				DCD26E9B2BB3F08E00D22E33 /* Mini1App.swift in Sources */,
+				DCAF12EC2BBC7DE400661202 /* PlanView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

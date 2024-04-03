@@ -5,17 +5,18 @@ struct MainView: View {
         TabView {
             ContentView()
                 .tabItem {
-                    Label("Overview", systemImage: "house.fill")
+                    Label("Overview", systemImage: "chart.bar.fill")
                 }
             FormView()
                 .tabItem {
-                    Label("", systemImage: "plus.circle.fill")
+                    Label("Add Expense", systemImage: "plus.circle.fill")
                 }
             PlanView()
                 .tabItem {
-                    Label("Plan", systemImage: "list.bullet.clipboard.fill")
+                    Label("Planning", systemImage: "list.bullet.clipboard.fill")
                 }
         }
+        
     }
 }
 
