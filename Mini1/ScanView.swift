@@ -66,11 +66,11 @@ struct ScanView:View {
                                             HStack{
                                                 VStack{
                                                     ForEach(0..<selectedOptions.count, id: \.self) { index in
-                                                                        RadioButton(isSelected: self.selectedOptions[index]) {
-                                                                            self.selectedOptions[index].toggle()
-                                                                        }
-                                                                        Spacer()
-                                                                    }
+                                                        RadioButton(isSelected: self.selectedOptions[index]) {
+                                                            self.selectedOptions[index].toggle()
+                                                        }
+                                                    Spacer()
+                                                    }
                                                 }
                                                 VStack{
                                                     TransactionDetail(date: "01/04", price: "Rp 10.000,00", desc: "Bank Administration", method: "DB OTOMATIS")
