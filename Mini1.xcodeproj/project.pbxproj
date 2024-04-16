@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		769537032BCC1E79004958E3 /* CategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769537022BCC1E79004958E3 /* CategoryButton.swift */; };
 		76AA96462BCC11EA00DC7BBC /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AA96452BCC11EA00DC7BBC /* ScanView.swift */; };
 		DC7208472BB7F4300025C056 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7208462BB7F4300025C056 /* MainView.swift */; };
 		DC7208492BB7F47F0025C056 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7208482BB7F47F0025C056 /* DetailView.swift */; };
@@ -22,7 +21,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		769537022BCC1E79004958E3 /* CategoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = "<group>"; };
 		76AA96452BCC11EA00DC7BBC /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
 		DC7208462BB7F4300025C056 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		DC7208482BB7F47F0025C056 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
@@ -78,7 +76,6 @@
 				DC72084A2BB7F61F0025C056 /* FormView.swift */,
 				DCAF12E92BBC4DA100661202 /* BudgetModel.swift */,
 				76AA96452BCC11EA00DC7BBC /* ScanView.swift */,
-				769537022BCC1E79004958E3 /* CategoryButton.swift */,
 			);
 			path = Mini1;
 			sourceTree = "<group>";
@@ -162,7 +159,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCAF12EA2BBC4DA100661202 /* BudgetModel.swift in Sources */,
-				769537032BCC1E79004958E3 /* CategoryButton.swift in Sources */,
 				DC72084B2BB7F61F0025C056 /* FormView.swift in Sources */,
 				DCD26E9D2BB3F08E00D22E33 /* ContentView.swift in Sources */,
 				DC7208492BB7F47F0025C056 /* DetailView.swift in Sources */,

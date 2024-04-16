@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ScanView:View {
+    @State private var selectedOption: Int?
+    @State private var selectedOptions = Array(repeating: false, count: 4)
     var body: some View {
         ZStack{
             Rectangle()
@@ -40,37 +42,35 @@ struct ScanView:View {
                                     Spacer()
                                 }
                                 HStack{
+                                    CategoryButton(isSelected: selectedOption == 0, action: {
+                                        self.selectedOption = 0
+                                    }, icon: "🍔", name: "Food")
                                     Spacer()
-                                    CategoryButton(icon: "🍔", name: "Food")
+                                    CategoryButton(isSelected: selectedOption == 1, action: {
+                                        self.selectedOption = 1
+                                    }, icon: "🚆", name: "Transportation")
                                     Spacer()
-                                    CategoryButton(icon: "🚆", name: "Transportation")
+                                    CategoryButton(isSelected: selectedOption == 2, action: {
+                                        self.selectedOption = 2
+                                    }, icon: "🎮", name: "Entertainment")
                                     Spacer()
-                                    CategoryButton(icon: "🎮", name: "Entertainment")
-                                    Spacer()
-                                    CategoryButton(icon: "🐱", name: "Pet")
+                                    CategoryButton(isSelected: selectedOption == 3, action: {
+                                        self.selectedOption = 3
+                                    }, icon: "🐱", name: "Pet")
                                 }
-                                RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
+                                
+                                RoundedRectangle(cornerRadius: 25.0)
                                     .fill(Color("lightYellow"))
                                     .overlay(
                                         VStack{
                                             HStack{
                                                 VStack{
-                                                    Circle()
-                                                        .frame(width: 30)
-                                                        .foregroundColor(.white)
-                                                    Spacer()
-                                                    Circle()
-                                                        .frame(width: 30)
-                                                        .foregroundColor(.white)
-                                                    Spacer()
-                                                    Circle()
-                                                        .frame(width: 30)
-                                                        .foregroundColor(.white)
-                                                    Spacer()
-                                                    Circle()
-                                                        .frame(width: 30)
-                                                        .foregroundColor(.white)
-                                                    Spacer()
+                                                    ForEach(0..<selectedOptions.count, id: \.self) { index in
+                                                                        RadioButton(isSelected: self.selectedOptions[index]) {
+                                                                            self.selectedOptions[index].toggle()
+                                                                        }
+                                                                        Spacer()
+                                                                    }
                                                 }
                                                 VStack{
                                                     TransactionDetail(date: "01/04", price: "Rp 10.000,00", desc: "Bank Administration", method: "DB OTOMATIS")
@@ -95,6 +95,41 @@ struct ScanView:View {
                 }
             }
         }
+    }
+}
+
+struct CategoryButton:View {
+    var isSelected: Bool
+    var action: () -> Void
+    var icon:String
+    var name:String
+    
+    var body: some View{
+        VStack{
+            ZStack{
+                Button(action: action){
+                    ZStack{
+                        Circle()
+                            .frame(width: 50)
+                            .foregroundColor(Color("lightYellow"))
+                        Text(icon)
+                            .font(.largeTitle)
+                        
+                        if isSelected {
+                            Circle()
+                                .frame(width: 50)
+                                .foregroundColor(Color.yellow)
+                            Text(icon)
+                                .font(.largeTitle)
+                        }
+                    }
+                }
+                
+            }
+            Text(name)
+                .font(.caption)
+                .foregroundColor(.gray)
+        }.frame(width: 90)
     }
 }
 
@@ -123,6 +158,27 @@ struct TransactionDetail:View {
             Spacer()
         }
         Spacer()
+    }
+}
+
+struct RadioButton: View {
+    var isSelected: Bool
+    var action: () -> Void
+    
+    var body: some View {
+        Button(action: action) {
+            ZStack {
+                Circle()
+                    .frame(width: 30)
+                    .foregroundColor(.white)
+                
+                if isSelected {
+                    Circle()
+                        .fill(Color.yellow)
+                        .frame(width: 30)
+                }
+            }
+        }
     }
 }
 
